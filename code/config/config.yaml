@@ -1,0 +1,8 @@
+ops:
+  set_up_tables:
+    config:
+      host: 'localhost'
+      database: 'TEST'
+      user: "postgres"
+      password: ''
+      tables: 'test'
