@@ -17,8 +17,11 @@ from PIL import Image
 import numpy as np
 
 # Reference for multipage: https://towardsdatascience.com/creating-multipage-applications-using-streamlit-efficiently-b58a58134030
-
-
+# Reference for visualizations: https://rputra.medium.com/interactive-map-based-data-visualizations-with-streamlit-and-bokeh-js-e29c4751648
+#  https://deck.gl/docs/api-reference/layers
+ # https://deck.gl/docs/api-reference/layers/text-layer
+# https://deckgl.readthedocs.io/en/latest/layer.html
+#  https://docs.streamlit.io/library/api-reference/charts/st.pydeck_chart
 
 def app():
     display = Image.open('images/yosemite-valley-snow.webp')
