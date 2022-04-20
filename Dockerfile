@@ -19,7 +19,7 @@ COPY dagster.yaml /opt/dagster/dagster_home/
 WORKDIR /opt/dagster/app
 
 RUN apt-get install -y libpq-dev
-RUN pip install psycopg2 requests numpy pandas python-dotenv streamlit matplotlib
+RUN pip install psycopg2 requests numpy pandas python-dotenv streamlit matplotlib pyaml
 EXPOSE 3000
 EXPOSE 8501
 EXPOSE 8000

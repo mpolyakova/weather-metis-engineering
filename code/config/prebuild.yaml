@@ -1,0 +1,11 @@
+ops:
+  set_up_tables:
+    config:
+      host: 'localhost'
+      database: 'TEST'
+      user: "postgres"
+      password: ''
+      tables: {'test': {'name':'VARCHAR', },  
+                'locations':{'name':'VARCHAR','lat':'float', 'lon':'FLOAT','start_date':'timestamp', 'end_date':'timestamp', '_id':'VARCHAR','generated':'BOOLEAN'}, 
+                'location_responses': {'_id': 'VARCHAR', 'forecast_office':'VARCHAR', 'gridx':'FLOAT', 'gridy':'FLOAT','forecast':'VARCHAR', 'forecast_hourly':'VARCHAR', 'nearby_city':'VARCHAR', 'nearby_state':'VARCHAR' },
+                'forecasts': {'_id': 'VARCHAR', 'forecast':'VARCHAR', 'updated':'timestamp', 'elevation':'float', 'forecast_type':'VARCHAR', 'start_time':'timestamp', 'end_time':'timestamp','is_daytime':'BOOLEAN', 'temp':'float','wind_speed':'VARCHAR', 'wind_dir':'VARCHAR', 'short':'VARCHAR'}}
