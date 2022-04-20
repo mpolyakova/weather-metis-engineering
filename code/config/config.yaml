@@ -5,4 +5,64 @@ ops:
       database: 'TEST'
       user: "postgres"
       password: ''
-      tables: 'test'
+      tables: {'test': {'name':'VARCHAR', },  
+                'locations':{'name':'VARCHAR','lat':'float', 'lon':'FLOAT','start_date':'timestamp', 'end_date':'timestamp', '_id':'VARCHAR','generated':'BOOLEAN'}, 
+                'location_responses': {'_id': 'VARCHAR', 'forecast_office':'VARCHAR', 'gridx':'FLOAT', 'gridy':'FLOAT','forecast':'VARCHAR', 'forecast_hourly':'VARCHAR', 'nearby_city':'VARCHAR', 'nearby_state':'VARCHAR' },
+                'forecasts': {'_id': 'VARCHAR', 'forecast':'VARCHAR', 'updated':'timestamp', 'elevation':'float', 'forecast_type':'VARCHAR', 'start_time':'timestamp', 'end_time':'timestamp','is_daytime':'BOOLEAN', 'temp':'float','wind_speed':'VARCHAR', 'wind_dir':'VARCHAR', 'short':'VARCHAR'}}
+  get_links:
+    config:
+      database: TEST
+      host: localhost
+      locations_table: locations
+      password: ""
+      user: postgres
+  get_location_details:
+    config:
+      database: TEST
+      host: localhost
+      password: ""
+      request_table: location_responses
+      user: postgres
+      wait_time: 1
+      full_refresh: true
+  generate_locations_around_original:
+    config:
+      host: 'localhost'
+      database: 'TEST'
+      user: "postgres"
+      password: ''
+      locations_table: "locations"
+      distance_in_m: 2500
+      num_points: 15
+  get_forecast:
+    config:
+      database: TEST
+      forecast_table: forecasts
+      host: localhost
+      password: ""
+      request_table: location_responses
+      user: postgres
+      wait_time: 1
+
+  check_tables:
+    config:
+      database: TEST
+      forecasts_table: forecasts
+      host: localhost
+      locations_table: locations
+      password: ""
+      requests_table: location_responses
+      user: postgres
+      
+  get_not_matched_links:
+    config:
+      database: TEST
+      host: localhost
+      location_responses_table: location_responses
+      locations_table: locations
+      password: ""
+      user: postgres
+
+
+
+

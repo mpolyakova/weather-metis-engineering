@@ -1,0 +1,10 @@
+ops:
+  get_forecast:
+    config:
+      database: TEST
+      forecast_table: forecasts
+      host: localhost
+      password: ""
+      request_table: location_responses
+      user: postgres
+      wait_time: 1

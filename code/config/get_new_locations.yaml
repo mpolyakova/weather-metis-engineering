@@ -1,0 +1,22 @@
+ops:
+  get_location_details:
+    config:
+      database: TEST
+      host: localhost
+      password: ""
+      request_table: location_responses
+      user: postgres
+      wait_time: 1
+      full_refresh: true
+  get_not_matched_links:
+    config:
+      database: TEST
+      host: localhost
+      location_responses_table: location_responses
+      locations_table: locations
+      password: ""
+      user: postgres
+
+
+
+

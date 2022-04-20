@@ -1,0 +1,10 @@
+ops:
+  clean_up_locations:
+    config:
+      database: TEST
+      forecasts_table: forecasts
+      host: localhost
+      locations_table: locations
+      password: ""
+      requests_table: location_responses
+      user: postgres

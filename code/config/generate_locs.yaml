@@ -1,0 +1,12 @@
+ops:
+  generate_locations_around_original:
+    config:
+      host: 'localhost'
+      database: 'TEST'
+      user: "postgres"
+      password: ''
+      locations_table: "locations"
+      distance_in_m: 2500
+      num_points: 15
+
+
