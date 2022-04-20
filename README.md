@@ -39,8 +39,11 @@ Dagster manages the scheduled pieces of the pipeline - the forecast and details 
 
 #### Streamlit 
 The Streamlit app contains three pages, selectable from a dropdown on the left hand side. 
+
 ##### Locations
 The location details are in the background page, displaying location names and generated points in a map. 
+![image](https://github.com/mpolyakova/weather-metis-engineering/blob/master/code/images/background-full-page.png)
+
 
 ##### Latest Forecast
 This page displays the latest forecasts for points around a location. It defaults to the average of all user inputted locations, but a dropdown on the left side will focus and zoom on a specific location.  
