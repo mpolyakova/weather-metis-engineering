@@ -16,6 +16,9 @@ from pages.utils import postgresql_to_dataframe, base_query, get_postgres
 from PIL import Image
 import numpy as np
 
+# Reference for multipage: https://towardsdatascience.com/creating-multipage-applications-using-streamlit-efficiently-b58a58134030
+
+
 
 def app():
     display = Image.open('images/yosemite-valley-snow.webp')
