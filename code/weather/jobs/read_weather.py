@@ -108,7 +108,7 @@ def grab_forecast_results(row, columns):
         response_raw = requests.get(link, headers=headers)
         response = response_raw.json()
     except:
-        os.sleep(5)
+        time.sleep(10)
         response_raw = requests.get(link, headers=headers)
         response = response_raw.json()
 

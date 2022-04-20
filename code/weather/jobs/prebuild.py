@@ -94,7 +94,7 @@ def check_tables(context):
     UNION ALL
     SELECT '{requests_table}', count(DISTINCT _id) FROM {requests_table}
     UNION ALL
-    SELECT '{forecasts_table}', count(DISTINCT _id) FROM {forecasts_table}
+    SELECT '{forecasts_table}', count(*) as raw FROM {forecasts_table}
     """
 
     base_stats = grab_query(host, database, user, password, query)
@@ -121,11 +121,6 @@ def check_tables(context):
 
 
     """
-
-
-
-    x = grab_query(host, database, user, password, """INSERT INTO locations(name, lat, lon, generated, _id) VALUES ('Tenaya Lake','37.8319','-119.4600',True,'https://api.weather.gov/points/37.8319,-119.4600')""")
-    print(x)
 
     summary = grab_query(host, database, user, password, query)
     print('\n'.join([str(i) for i in summary]))

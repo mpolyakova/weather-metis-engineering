@@ -44,7 +44,7 @@ def app():
     """
 
     df2 = postgresql_to_dataframe(get_postgres(), query)
-    st.dataframe(df2)
+    # st.dataframe(df2)
     # print(df2)
 
     # forecast = pdk.Layer(
