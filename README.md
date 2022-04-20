@@ -61,13 +61,13 @@ The page also allows users to remove locations using a dropdown. After confirmin
 ![image](https://github.com/mpolyakova/weather-metis-engineering/blob/master/code/images/delete-zoomed.png)
 
 ## Tools 
-Numpy and pandas for dataframe handling, and location generation
-Yaml and pyaml for config handling
-Dagster for job defintions and scheduling
-Streamlit for app deployment. 
-Postgres for data storage
-Docker for containerizing 
-Request for data scraping 
+Numpy and pandas for dataframe handling, and location generation  
+Yaml and pyaml for config handling  
+Dagster for job defintions and scheduling  
+Streamlit for app deployment.   
+Postgres for data storage  
+Docker for containerizing   
+Request for data scraping   
 
 
 
