@@ -38,7 +38,8 @@ It contains 3 tables - locations, location_requests and forecasts, corresponding
 Dagster manages the scheduled pieces of the pipeline - the forecast and details gathering, and location generation. We've created a weather python module containing the job code for these key pieces, under the same config. The forecasts, details collection and location generation are scheduled. 
 
 #### Streamlit 
-The Streamlit app contains three pages, selectable from a dropdown on the left hand side. 
+The Streamlit app contains three pages, selectable from a dropdown on the left hand side.  
+A base query was created to default locations in the same grid square to one point. If the square contains a user inputted point, defaulting to it, otherwise one of the generated. This is done to prevent overlaps in points display if many nearby locations are entered.  
 
 ##### Locations
 The location details are in the background page, displaying location names and generated points in a map. 
@@ -48,11 +49,16 @@ The location details are in the background page, displaying location names and g
 ##### Latest Forecast
 This page displays the latest forecasts for points around a location. It defaults to the average of all user inputted locations, but a dropdown on the left side will focus and zoom on a specific location.  
 The page contains two maps - one with the average temperatures forecasted for each location for the next ten days, and one allowing to select a specific day and look at the latest forecast using a slider.  
-
+![image](https://github.com/mpolyakova/weather-metis-engineering/blob/master/code/images/forecasts-full-gate.png)
+###### Zoomed:
+![image](https://github.com/mpolyakova/weather-metis-engineering/blob/master/code/images/forecast-by-day-zoomed.png)
 
 ##### Location Management
 This page allows the user to control locations for which we gather forecasts. The page allows users to add a location, using a name and latitude and longtitude. These are inserted into the locations, and trigger a one-off run of the location generation, and details gathering jobs.  
 The page also allows users to remove locations using a dropdown. After confirming, the location is removed from the database, and the locations generate job is triggered to clear the previously generated location. 
+![image](https://github.com/mpolyakova/weather-metis-engineering/blob/master/code/images/manage-locations-full-page.png)
+###### Zoomed: 
+![image](https://github.com/mpolyakova/weather-metis-engineering/blob/master/code/images/delete-zoomed.png)
 
 ## Tools 
 Numpy and pandas for dataframe handling, and location generation
@@ -65,7 +71,8 @@ Request for data scraping
 
 
 
-
+## Communication
+A PPT presentation lasting 5 minutes will be presented 
 
 
 
