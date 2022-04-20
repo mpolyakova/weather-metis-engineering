@@ -5,7 +5,8 @@ Backpacking planning is a lot of steps, from food to gear to location planning. 
 Each backpacker attempts to resolve the problem in their own way, but currently, the common format is manually checking and rechecking weather along key points along the planned route - if multiple routes are considered, along each route. This is highly inefficient, and can lead to missed weather cues and potential mishaps. We propose an app which takes input locations and expands the monitored points in all directions, and then presents the latest forecast to the user. 
 
 ## Design 
-The pipeline will have a preset location for Yosemite National Park, and take in additional user input. For each of the inputted locations, we will generate additional points around the location, and monitor forecasts at each of the locations on an ongoing basis in the following manner: 
+The pipeline will have a preset location for Yosemite National Park, and take in additional user input. For each of the inputted locations, we will generate additional points around the location, and monitor forecasts at each of the locations on an ongoing basis in the following manner. 
+![image](https://github.com/mpolyakova/weather-metis-engineering/blob/master/code/images/detailed_structure.png)
 ### Weather.gov Api
 The api is free to use for the public. Areas in the United States are divided into a 2.5km by 2.5km grid, with a separate forecast for each. In order to access the forecast, one must collect a forecast link for the location, and then query that forecast link. The links can change, but it is uncommon.  
 The forecast link will be the same for each location within the same square.  
